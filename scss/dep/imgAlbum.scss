@@ -1,0 +1,129 @@
+.album {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,.75);
+  z-index: 11;
+}
+
+.show {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 125px;
+  padding: 0;
+}
+
+.show:before {
+  content: '';
+  margin: -1px;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.album_image {
+  width: auto;
+  max-width: 85%;
+  max-height: 95%;
+  display: block;
+  margin: auto;
+  vertical-align: middle;
+}
+
+.thumbnails {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 0 70px;
+  width: 100%;
+  height: 120px;
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+
+.thumbnail {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 180px;
+  height: 120px;
+  overflow: hidden;
+}
+
+.thumbnail.selected {
+  border: 1px solid #FFFFFF;
+}
+
+.thumbnail_img {
+  display: block;
+  width: 160px;
+  margin: auto;
+}
+
+.left_arrow,
+.right_arrow {
+  width: 70px;
+  height: 100%;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  background-color: rgba(0,0,0,.8);
+  cursor: pointer;
+}
+
+.left_arrow { left: 0; }
+.right_arrow { right: 0; }
+
+.left_arrow:before,
+.left_arrow:after,
+.right_arrow:before,
+.right_arrow:after {
+  content: '';
+  width: 45px;
+  height: 0;
+  border: 10px solid #F0F0F0;
+  border-radius: 10px;
+  background-color: rgba(255,255,255,.75);
+  position: absolute;
+  top: 50%;
+}
+
+.left_arrow:before,
+.left_arrow:after {
+  left: 10px;
+  -webkit-transform-origin: 10px center;
+  transform-origin: 10px center;
+}
+
+.right_arrow:before,
+.right_arrow:after {
+  right: 10px;
+  -webkit-transform-origin: 55px center;
+  transform-origin: 55px center;
+}
+
+.left_arrow:before,
+.right_arrow:after {
+  -webkit-transform: rotate(60deg);
+  transform: rotate(60deg);
+}
+
+.right_arrow:before,
+.left_arrow:after {
+  -webkit-transform: rotate(300deg);
+  transform: rotate(300deg);
+}
+
+.album_close {
+  display: block;
+  width: 80px;
+  height: 30px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #FFFFFF;
+  line-height: 30px;
+  cursor: pointer;
+}

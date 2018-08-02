@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    block locals
+      -
+        locals.title = "Chris Gaeta";
+        locals.dir =   ".";
+        locals.url =   "./";
+        locals.par_flag = false;
+    block links
+      include /templates/layouts/head.pug
+  body
+    #wrapper.fs-12(class={ parallax: locals.par_flag })
+      include /templates/layouts/nav.pug
+      block content
+        .body
+          block body
+      block footer
+        include /templates/layouts/footer.pug

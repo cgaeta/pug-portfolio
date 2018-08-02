@@ -1,0 +1,28 @@
+mixin project(p)
+  .projects
+    if p.imgs.length > 0
+      .projectImages
+        each val in p.imgs
+          img.projectImg(src=dir+"/img/"+val+".png")
+    .projectdesc
+      h2.projectName #{p.name}
+      ul.technology
+        each val in p.tech
+          li= val
+      ul.tools
+        each val in p.tools
+          li= val
+      each val in p.text
+        p.projectText= val
+      a.seeMore.btn(href=p.seeMore target="_blank") Try it
+      //a.bitbucketRepo.btn(href=p.repo target="_blank") See the repo
+    if block
+      .demoCont
+        ul.demoFiles
+          each val, ind in p.list
+            if ind === 0
+              li.selected= val
+            else
+              li= val
+        pre
+          block

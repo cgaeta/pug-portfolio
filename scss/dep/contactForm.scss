@@ -1,0 +1,118 @@
+#contact {
+  display: inline-block;
+  min-width:240px;
+  max-width: 360px;
+  vertical-align: top;
+  margin-bottom: 25px;
+}
+
+#contact label {
+  display: block;
+  height: 25px;
+  font-size: 1em;
+  font-weight: 300;
+  line-height: 1.38;
+  color: rgb(255, 255, 255);
+  opacity: 0;
+  -webkit-transition: .5s opacity ease-in;
+  transition: .5s opacity ease-in;
+}
+
+.feedback {
+  color: rgb(255, 255, 255);
+  width: 14em;
+  margin: 0 0 0 auto;
+  height: 1.5em;
+  line-height: 1.5em;
+  text-align: center;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transition: .5s -webkit-transform ease-in, .5s opacity ease-in;
+  -webkit-transition: .5s transform ease-in, .5s opacity ease-in;
+  transition: .5s transform ease-in, .5s opacity ease-in;
+}
+
+#contact .feedback.show {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+  opacity: 1;
+}
+
+.feedback.show ~ .submit {
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+}
+
+#contact_me {
+  font-size: 2.5em;
+  color: #FFFFFF;
+}
+
+#guestname,
+#guestemail {
+  display: block;
+  width: 100%;
+  height: 25px;
+  background-color: rgb(242, 242, 242);
+  font-size: 0.813em;
+  font-weight: 400;
+  line-height: 1.38;
+  color: rgb(0, 0, 0);
+  padding-left: 10px;
+}
+
+#guestname.filled:invalid + .namelabel,
+#guestemail.filled:invalid + .emaillabel,
+#guestmessage.filled:invalid + .messagelabel{
+  color: rgb(255, 0, 0);
+  opacity: .5;
+  font-weight: 700;
+}
+
+#guestname.filled:valid + .namelabel,
+#guestemail.filled:valid + .emaillabel,
+#guestmessage.filled:valid + .messagelabel {
+  opacity: .75;
+}
+
+#guestname:focus ~ .namelabel,
+#guestemail:focus ~ .emaillabel,
+#guestmessage:focus ~ .messagelabel {
+  color: rgb(255, 255, 255);
+  opacity: 1;
+}
+
+#guestmessage {
+  display: block;
+  width: 100%;
+  height: 90px;
+  padding: 5px;
+  background-color: rgb(242, 242, 242);
+  font-family: Oswald;
+  font-size: 1em;
+  font-weight: 300;
+  line-height: 1.38;
+  color: rgb(0, 0, 0);
+  resize: none;
+}
+
+.submit {
+  display: block;
+  width: 10em;
+  height: 1.5em;
+  margin: 0 0 0 auto;
+  border-radius: 3px;
+  background-color: rgb(222, 222, 222);
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.5em;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+  -webkit-transition: .5s -webkit-transform ease-in;
+  -webkit-transition: .5s transform ease-in;
+  transition: .5s transform ease-in;
+  -webkit-transform-origin: bottom;
+  transform-origin: bottom;
+}

@@ -1,0 +1,76 @@
+extends /templates/layouts/layout.pug
+block locals
+  -
+    locals.title = "Chris Gaeta - About me";
+    locals.dir =   ".";
+    locals.url =   "/about";
+append links
+  link(rel="stylesheet" href=locals.dir+"/css/index.css")
+block body
+  #about_me.fs-12
+    #profile_photo.fs-3.fo-0.fs4-800.inlineBlock
+      img(src=require('img/profile_pre.png') data-src=require('img/profile.png'))
+    .fs-5.fs-6-1280.fo.fs-8-800.inlineBlock
+      h1 Who am I?
+      p I'm Chris Gaeta, a 25 year-old <span class="black">UX researcher</span>, <span class="black">web developer</span>, and <span class="black">web designer</span>. I'm looking for somebody willing to pay for the skills I have carefully cultivated to <span class="black">identify</span> and <span class="black">satisfy users' needs</span>, <span class="black">build websites</span>, and <span class="black">develop applications</span>.
+      p After a year and a half studying <span class="black">animation</span> and <span class="black">game development</span> at <span class="black">Purdue University</span>, I turned my focus to <span class="black">web development</span> and got my M.S. studying <span class="black">user experience research</span>.
+      p I've got an iOS app, <a href="https://itunes.apple.com/us/app/isee-integrating-spatial-educational/id996159565?mt=8">Isee - Integrating Spatial Educational Experiences</a>, on the iTunes store, and I was a front-end developer for <a href="dia2.org">DIA2 - Deep Insights Anytime, Anywhere</a>. I taught a class in <span class="black">back-end development</span>, too.
+      h2 Why should you hire me?
+      p On top of my programming skills and understanding of user research, I'm a <span class="black">clear communicator</span>, a <span class="black">bilingual Spanish speaker</span>, and an independent <span class="black">problem solver</span>. I can <span class="black">handle pressure</span> and <span class="black">stay calm</span> in the face of difficult problems. I do my best to recognize my assumptions and consider problems from <span class="black">different perspectives</span>.
+      p I am a <span class="black">quick learner</span>, and ready to ask for help if I am ever really struggling.
+      h2 What am I passionate about?
+      p I started taking dance classes when I was 19, and I was teaching Salsa and Bachata classes for about five years. It's a fun exercise and great way to meet people.
+    #technologies.fs-4.fs-3-1280.fo.fs-10-800.fo-1-800.inlineBlock
+      h2 My tools
+      include /templates/layouts/hex.pug
+  #skills.section.fs-10
+    h2 My skills
+    ul.flex
+      li.skill.fs-4.fs-6-1280.fs-12-800
+        //img.skillicon(src=require('img/meeting_photo_120.jpg'))
+        .skilltext
+          h3 User research
+          p.skilldesc Successful products <span class="black">solve a problem</span> for their users. The trick is <span class="black">knowing your users</span> well enough to know their problems.
+      li.skill.fs-4.fs-6-1280.fs-12-800
+        //img.skillicon(src=require('img/index_ia_120.png'))
+        .skilltext
+          h3 Information architecture
+          p.skilldesc Using <span class="black">card sorting</span>, I can <span class="black">organize</span> information to help users find <span class="black">what they want</span>.
+      li.skill.fs-4.fs-6-1280.fs-12-800
+        //img.skillicon(src=require('img/index_ixd_120.jpg'))
+        .skilltext
+          h3 Interaction design
+          p.skilldesc <span class="black">Interactions</span> need to be clearly communicated with meaningful <span class="black">animation</span>.
+      li.skill.fs-4.fs-6-1280.fs-12-800
+        //img.skillicon(src=require('img/index_data_vis_120.png'))
+        .skilltext
+          h3 Data visualization
+          p.skilldesc In <span class="black">big data</span> analysis, the best way to find <span class="black">patterns</span> is with <span class="black">graphics</span>.
+      li.skill.fs-4.fs-6-1280.fs-12-800
+        //img.skillicon(src=require('img/index_developer_120.png'))
+        .skilltext
+          h3 Development
+          p.skilldesc Using <span class="black">HTML, CSS, and Javascript</span>, I can create <span class="black">interactive prototypes</span> with <span class="black">production quality</span> code.
+      li.skill.fs-4.fs-6-1280.fs-12-800
+        //img.skillicon(src=require('img/index_social_120.png'))
+        .skilltext
+          h3 Social psychology
+          p.skilldesc Part of <span class="black">understanding people</span> is knowing how people <span class="black">influence each other</span> and their thoughts and behaviors.
+  #coursework.section.fs-10
+    h2 Relevant Coursework
+    .fs-6.fs-12-800.fo-0
+      h3 Web Development
+      ul
+        li
+          <span class="black">CGT 511</span> Development of Graphics in Technology
+        li
+          <span class="black">CGT 456</span> Advanced Web Programming, Development, &amp; Data Integration
+    .fs-6.fs-12-800.fo
+      h3 User Experience
+      ul
+        li
+          <span class="black">TECH 697</span> Qualitative Research Methods in Technology Studies
+        li
+          <span class="black">CGT 512</span> Human Factors of Computer Interaction Design
+        li
+          <span class="black">PSY 577</span> Human Factors in Engineering

@@ -1,0 +1,132 @@
+extends /templates/layouts/layout.pug
+block locals
+  -
+    locals.title = "Chris Gaeta - Resume"
+    locals.dir =   ".";
+    locals.url =   "/resume";
+append links
+  link(rel="stylesheet" href=locals.dir+"/css/resume.css")
+block body
+  .dlCont
+    a#resumeDl(href="./cgaeta_resume.pdf" download="cgaeta_resume.pdf") Download resume
+  .resume
+    .personal
+      p
+        span.resume_name Christopher M Gaeta
+        span.right.resume_title UX Designer / Developer
+        br
+        | Contact me with form below
+      h2.profile My Profile:
+      p.profile_text I am a <span class="black">UX designer</span> and <span class="black">developer</span> with experience in <span class="black">big data analytics</span>, knowledge of <span class="black">social psychology</span>, and a passion for crafting quality user experiences.
+    .work
+      ul.jobs.resumeSection
+        li
+          h2.section_header Work Experience
+        li.job
+          p.loc_date
+            span.bold Mortenson Kim
+            |  / July 2017 - July 2018
+            br
+            | Indianapolis, IN
+          p.job_title Digital Developer
+          ul.accomplishments
+            li Create templates and automated build tools
+            li Design an internal digital product development process
+            li Build animated HTML5 banners and small websites for marketing campaigns
+            li Build websites with <span class="bold">Wordpress</span> and customized Wordpress themes
+            li Build HTML emails for marketing campaigns and newsletters
+            li Build and troubleshoot marketing materials on other digital platforms
+
+        li.job
+          p.loc_date
+            span.bold Purdue University
+            |  / Jan 2015 - May 2016
+            br
+            | West Lafayette, IN
+          p.job_title DIA2: Front-End Web Developer
+          ul.accomplishments
+            li
+              span.bold Collaborate
+              |  with other student assistants to design a web-based, interactive platform for <span class="bold">knowledge mining and visualization</span>
+            li
+              span.bold Liaison
+              |  between technical and user experience teams
+            li
+              span.bold Advocate
+              |  for simpler user interactions
+            li
+              span.bold Develop
+              |  production-quality features for <span class="bold">usability testing</span>
+            li
+              | Identify and <span class="bold">fix usability issues</span>
+        li.job
+          p.loc_date
+            span.bold Purdue University
+            |  / Aug 2014 - Dec 2014
+            br
+            | West Lafayette, IN
+          p.job_title Teaching Assistant
+          ul.accomplishments
+            li Guide and assist students in a back-end PHP and MySQL class
+            li Grade students&apos; work
+      ul.educationWork.resumeSection
+        li
+          h2.section_header Education Experience
+        li.project
+          p.loc_date
+            span.bold Purdue University
+            |  / Aug 2014 - Dec 2014
+            br
+            | West Lafayette, IN
+          p.job_title VSTAR
+          ul.accomplishments
+            li
+              span.bold Collaborate
+              |  with other students to redesign an online orientation tool for foreign students
+            li
+              | Develop a <span class="bold">persona</span> and <span class="bold">identify design requirements</span>
+            li
+              span.bold Sketch
+              |  and create <span class="bold">wireframes</span>
+            li
+              | Conduct <span class="bold">usability tests</span> with paper prototypes
+    .education
+      ul.degrees
+        li
+          h2.section_header Education
+        li.degree
+          p.loc
+            span.bold Purdue University <span class="date">/ May 2016</span>
+          .details
+            p.department Polytechnic Institute
+            p West Lafayette, Indiana
+            p M.S. in Computer Graphics Technology
+            p Concentration in Human Centered Design &amp; Development
+        li.degree
+          p.loc
+            span.bold Purdue University <span class="date">/ May 2014</span>
+          .details
+            p.department Polytechnic Institute
+            p West Lafayette, Indiana
+            p B.S. in Computer Graphics Technology
+            p Concentration in Web Development
+      .skillsets
+        h2.section_header Skills
+        ul.details
+          li User interviews
+          li Observation
+          li Usability testing
+          li Affinity diagramming
+          li Qualitative data analysis
+          li Persona creation
+          li Sketching and wireframing
+          li Information architecture
+          li Interaction design
+          li HTML, CSS, Javascript
+          li PHP and MySQL
+          li Prototyping
+    .leadership
+      h2.section_header Leadership Experience
+      p.experience.loc_date Salsa Club / Fall, 2011 - Spring, 2016
+      ul.details.accomplishments
+        li Instruct various dance classes

@@ -1,0 +1,114 @@
+extends /templates/layouts/layout.pug
+block locals
+  -
+    locals.title = "Chris Gaeta"
+    locals.dir =   "."
+    locals.url =   "/"
+    locals.par_flag = true;
+append links
+  link(rel="stylesheet" href=locals.dir+"/css/projectStyles.css")
+block content
+  #mk.projects.parallax_group
+    .fs-12.par_layer.base
+      .projectdesc
+        h2.projectName Mortenson Kim
+        p.projectText Mortenson Kim is a full-service marketing &amp; advertising agency with offices in Milwaukee and Indianapolis.
+        p.projectText Mortenson Kim's clients have included Roche, Hoosier Lottery, and Indianapolis Motor Speedway, among others.
+  #dia2.projects.parallax_group
+    .fs-12.par_layer.base
+      .projectdesc
+        a(href="http://dia2.org")
+          h2.projectName DIA2
+        p.projectText DIA2 is a data-mining tool for academics created to explore National Science Foundation grants. Academics use this tool to identify research trends, funding opportunities, and collaborators.
+        p.projectText I collaborated with the UX team in designing interactions, developing interactive prototypes, and implementing changes to the data visualization tool.
+    ul#design_stories.fs-10.fo-1.fs-12-1280.fo-0-1280
+      li.story.par_layer.base
+        h3.storyTitle Responsive Design
+        img.banner(src=require('img/responsive_page_pre.png') data-src=require('img/responsive_page.png'))
+        p.storyText When I first joined the DIA2 team, our first priority was creating a homepage to market our application and teach our users about some of its uses.
+        p.storyText As I worked with the design team on marketing materials, copy, and implemented our homepage, I insisted on the importance of #[span.black mobile design]. After persuading the team, I adapted the visual designer's layouts for mobile devices, too.
+      li.story.par_layer.base
+        h3.storyTitle Collaborative Revisions
+        svg.banner(width="1300px" height="700px")
+          defs
+            mask#mask(maskUnits="userSpaceOnUse" maskContentUnits="userSpaceOnUse")
+              linearGradient#gradient(gradientUnits="objectBoundingBox" x2="1" y2="0")
+                stop#stop1(stop-color="#ffffff" stop-opacity="1" offset="0")
+                stop#stop2(stop-color="#ffffff" stop-opacity="0" offset="5%")
+              rect(width="100%" height="100%" fill="url(#gradient)")
+          image#backImg(xlink:href=require('img/DIA2_old_interface_pre.png') data-src=require('img/DIA2_old_interface.png') width="100%")
+          image#frontImg(xlink:href=require('img/DIA2_comp_pre.png') data-src=require('img/DIA2_comp.png') mask="url(#mask)" width="100%")
+        p.storyText In parallel with DIA2's homepage, I partnered with our visual designer to update the layout of our app.
+        p.storyText While I implemented the new visuals, I negotiated with our visual designer against interactions like drop-down menus in favor of usability.
+        p.storyText In the process, I took initiative and moved inlined styles in Javascript modules to CSS stylesheets for future maintenance and more readable code.
+      li.story.par_layer.base
+        h3.storyTitle Interaction Design
+        #ixd.fs-5.fs-10-800.fo-1.inlineBlock.imgCont
+          img(src=require('img/DIA2_login_flow_480_pre.png') data-src=require('img/DIA2_login_flow_480.png'))
+          img(src=require('img/DIA2_login_wireframe_480_pre.png') data-src=require('img/DIA2_login_wireframe_480.png'))
+          img.banner(src=require('img/DIA2_launch_guide_pre.png') data-src=require('img/DIA2_launch_guide.png'))
+        p.storyText Our next objective was implementing user registration and login for our app.
+        p.storyText I met with the design team to map out a user flow for registration and login. After that, I designed the UI for our login and registration forms, along with the navigation between them.
+        p.storyText With the technical team, I also mapped out the essential MySQL tables, wrote the prepared MySQL statements, and implemented the back-end login scripts with PHP.
+  #vstar.projects.parallax_group
+    .fs12.par_layer.base
+      .projectdesc
+        h2.projectName VSTAR
+        p.projectText VSTAR is an online student transition program for incoming Purdue students. The program&apos;s primary target demographics was international students, especially Chinese students.
+        p.projectText.fs-hide-640 I collaborated with a team of UX design and Civil Engineering students to conduct user research, usability studies, and redesigning the orientation tools and process.
+    ul#design_process.flex.par_layer.base
+      li.design_story.fs-5.fs-12-800.fo-0-800
+        h3.storyTitle Heuristic Analysis
+        img.design_img(src=require('img/vstar_heuristics_240_pre.png') data-src=require('img/vstar_heuristics_240.png') alt='Heuristic analysis' title='Heuristic analysis', data='vstar_eval')
+        .design_text
+          p We started with a Heuristic Evaluation of the current orientation process and decided to redesign VSTAR from scratch.
+          p The existing product had poor information scent, was difficult to navigate, and the platform gave developers little control over content.
+      li.design_story.fs-5.fs-12-800.fo-2.fo-0-800
+        h3.storyTitle Data Collection
+        img.design_img(src=require('img/meeting_photo_pre.jpg') data-src=require('img/meeting_photo.jpg') alt='Data Collection' title="Data Collection")
+        .design_text
+          p We conducted three interviews - one with an academic advisor, two with students - and used an open-ended survey to learn about our users and their needs.
+      li.design_story.fs-5.fs-12-800.fo-0-800
+        h3.storyTitle Analysis
+        img.design_img(src=require('img/vstar_persona_pre.png') data-src=require('img/vstar_persona.png') alt='User research' title='User research')
+        .design_text
+          p From our notes and surveys, we used an affinity diagram to develop a persona and identify design requirements. When we needed to further refine our findings, I led our team through a thematic analysis.
+      li.design_story.fs-5.fs-12-800.fo-2.fo-0-800
+        h3.storyTitle Ideation
+        img.design_img(src=require('img/vstar_prototype_pre.png') data-src=require('img/vstar_prototype.png') alt='VSTAR prototype' title='VSTAR prototype')
+        .design_text
+          p Taking inspiration from our persona and design requirements, we sketched out numerous ideas and layouts.
+          p With all our sketches, we agreed on a set of ideas and settled on a design to begin building on.
+      li.design_story.fs-5.fs-12-800.fo-0-800
+        h3.storyTitle Usability Testing
+        img.design_img(src=require('img/vstar_usability2_240_pre.png') data-src=require('img/vstar_usability2_240.png') alt='VSTAR usability test' title='VSTAR usability test')
+        .design_text
+          p We created a set of paper prototypes and recruited five participants - three high school students, and two college students - to test the usability of our design.
+          p The results of our tests helped us identify problematic areas in our design and to reiterate on our design.
+      li.design_story.fs-5.fs-12-800.fo-2.fo-0-800
+        h3.storyTitle Deliverables
+        img.design_img(src=require('img/vstar_research_pre.png') data-src=require('img/vstar_research.png') alt='VSTAR user research' title='VSTAR user research')
+        .design_text
+          p We presented our client with a report on our findings and a prototype built in Invision.
+    .design_story.fs-6.fs-12-800.fo-3.fo-0-800.par_layer.base
+      h3.storyTitle Check it out
+      .design_text
+        p Below are some links to our reports and to our interactive prototype - feel free to look.
+        ul.vstar_links
+          li
+            a(href='https://www.dropbox.com/s/tqzt8wt8aej1zec/2-VSTAR_2_Heuristic_Evaluation.pdf?dl=0', target='_blank') Heuristic Evaluation Report
+          li
+            a(href='https://www.dropbox.com/s/bo4by9f6brw1hs6/3-VSTAR_User_Research_Report.pdf?dl=0', target='_blank') User Research Report
+          li
+            a(href='https://www.dropbox.com/s/jxnlquxmxarknqz/5-VSTAR_2_Design_Report.pdf?dl=0', target='_blank') Design Report
+          li
+            a(href='https://www.dropbox.com/s/y1vnw7ghr4pns3s/7-VSTAR_2_Usability_Report.pdf?dl=0', target='_blank') Usability Report
+          li
+            a(href='https://projects.invisionapp.com/share/2C1UH1RFV#/screens/52515714', target='_blank') Interactive InVisio Prototype
+  #thesis.projects.parallax_group
+    .fs-12.par_layer.base
+      .projectdesc
+        h2.projectName Master&apos;s Thesis: Quit Playing With Your Watch
+        p.abstract This study identified perceptions and social norms that may affect smartwatch adoption. Interviews were conducted to identify perceptions of smartwatch use and norms that might affect those perceptions.
+        p.abstract.fs-hide-640 Smartwatch use was found to activate norms associated with wristwatch use &ndash; specifically, smartwatch users&rsquo; peers took offense to the users looking at their wristwatches. This study also found that norms prevent the use of smartwatches&rsquo; voice controls in public and various perceptions of smartwatch use and ownership.
+        a.fs-4.fo-0.seeMore(href='https://www.scribd.com/doc/312780812/Quit-Playing-With-Your-Watch-Perceptions-of-Smartwatch-Use', target='_blank') Read it

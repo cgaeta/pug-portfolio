@@ -1,0 +1,10 @@
+form#contact.fs-4.fs-5-800.fs-8-640.fo-1.fo-1280.fo-1-800(method="post" action="https://formspree.io/chrismgaeta@gmail.com")
+  h3#contact_me Contact Me
+  input#guestname(name="name" placeholder="What's your name?" required="required" type="text")
+  label.namelabel(for="name") Name
+  input#guestemail(name="email" placeholder="And your email?" required="required" type="email")
+  label.emaillabel(for="email") Email
+  textarea#guestmessage(name="message" required="required" placeholder="What can I help you with?")
+  label.messagelabel(for="message") Message
+  label.feedback
+  input.submit(type="submit" value="Send")

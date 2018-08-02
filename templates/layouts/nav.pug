@@ -1,0 +1,39 @@
+#navBack
+img#hero(src=(locals.url === "/" ? require('img/portrait_pre.png') : require('img/portrait_short_pre.png')) data-src=(locals.url === "/" ? require('img/portrait.png') : require('img/portrait_short.png')))
+#navCont(style=(locals.url==="/"?"padding:12.5% 0 37.5%":""))
+  include /templates/mixins/mixinNav.pug
+  -
+    locals.links = [
+      {
+        name: "<h1 class=\"name\">Chris Gaeta</h1>",
+        url: "\/",
+        classes: "fs-4 fs-5-1280 fs-7-800 fs-7-480 fo-1 fo-800"
+      },
+      {
+        name: "About",
+        url: "\/about",
+        classes: "fs-1 fs-2-1280 fs-2-800 fo-4 fo-1-1280 fo-1-800 fo-1-640"
+      },
+      {
+        name: "Resume",
+        url: "/resume"
+      }
+    ];
+    locals.sel = -1;
+    switch(locals.url) {
+      case "/": sel = 0;
+        break;
+      case "/about": sel = 1;
+        break;
+      case "/resume": sel = 2;
+        break;
+      case "/code/": sel = 3;
+        break;
+    }
+  +nav(links, sel, "fs-12 scrolled", dir)(class="fs-1 fs-2-1280 fs-2-800 fo")
+  if locals.url === "/"
+    #intro.fs-5.fs-10-800.fo-1
+      p.introtext
+        span Hey
+        | I&apos;m an alumnus of #[span Purdue University], where I was a #[span Human-Centered Design &amp; Development] student. I studied to be a #[span UX researcher], #[span designer], and #[span developer].
+      p.introtext I'm looking for fulfilling work as a UX designer and front-end web developer. I look forward to helping clients and users meet their needs.
